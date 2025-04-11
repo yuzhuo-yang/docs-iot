@@ -10,7 +10,7 @@ This user guide will guide you through the journey covering the most step you ne
 
 Android Phone
 
-GL-S200 Thread Border Router
+GL-S20 Thread Border Router
 
 Matter over Thread Smart Home Device
 
@@ -20,7 +20,7 @@ It is recommended to run the Matter add-on on Home Assistant OS. If you run Home
 
 ### Software Requirements  
 
-GL Router firmware 4.5 or later
+[Beta versions of v2.0.1-B1 and later](https://dl.gl-inet.com/iot/s20otbr/beta)
 
 Home Assistant 2023.2 or later
 
@@ -28,27 +28,15 @@ Phone with Google Play Services running Android 8.1 or higher
 
 ## Setting Up
 
-### Setting up GL-S200 Thread Border Router
+### Setting up GL-S20 Thread Border Router
 
-Thread Mesh Network is disable by default on GL-S200, you need to enable it by following steps.
+Thread Mesh Network is disable by default on GL-S20, you need to enable it by following steps.
 
-Open **GL-S200 Web Admin Panel > THREAD MESH > Thread Network**, and click **Enable**.
+Open **GL-S20 Web Admin Panel > THREAD MESH > Thread Network**, and click **Enable**.
 
 If you want to modify Thread Network configuration, you can follow [this instruction](https://docs.gl-inet.com/iot/en/thread_board_router/gl-s20/user_manual/#manual-setup).
 
-Then, based on your network topology, select the corresponding Backbone Router Interface at **GL-S200 Web Admin Panel > THREAD MESH > Advanced > Backbone Router > Backbone Interface**.
-
-* If your Home Assistant Host is on GL-S200's **LAN** side(no matter wired or wireless), select "**br-lan**", click apply to take effect.
-
-    ![home_assistant_host_on_gl-s200_lan.png](https://static.gl-inet.com/docs/iot/en/thread_board_router/gl-s200/enable_matter_over_thread_for_home_assistant/home_assistant_host_on_gl-s200_lan.png){class="glboxshadow"}
-
-* If your Home Assistant Host is on GL-S200's **WAN** side, select "**eth0**"(using wired WAN) or "**wlan-sta0**"(using repeater mode), click apply to take effect.
-
-    ![home_assistant_host_on_gl-s200_wan_wired.png](https://static.gl-inet.com/docs/iot/en/thread_board_router/gl-s200/enable_matter_over_thread_for_home_assistant/home_assistant_host_on_gl-s200_wan_wired.png){class="glboxshadow"}
-
-    ![home_assistant_host_on_gl-s200_wan_wireless.png](https://static.gl-inet.com/docs/iot/en/thread_board_router/gl-s200/enable_matter_over_thread_for_home_assistant/home_assistant_host_on_gl-s200_wan_wireless.png){class="glboxshadow"}
-
-If your Home Assistant Host is on the **WAN** side of GL-S200,  to enable Home Assistant access GL-S200. Navigate to **SYSTEM** > **Security** > **Open Ports On Router**, add port 8081, protocol TCP/UDP.
+Then, connect your GL-S20 to the network of an upper router via WAN or Wi-Fi, and ensure it is in the same local area network with Home Assistant.
 
 ### Installing the Open Thread Border Router and Thread Intergration
 
@@ -56,13 +44,11 @@ The Open Thread Border Router integration allows Home Assistant to acess Open Th
 
 To install this integration, navigate to **Home Assistant > Settings > Devices & Services > Add Intergration** and search for **Open Thread Border Router**, submit the url like below.
 
-:::
-http://**YOUR\_GL-S200\_IP\_ADDRESS**:8081
+> http://<**YOUR GL-S20 IP ADDRESS**>:8081
+>
+> (replace "**YOUR GL-S20 IP ADDRESS**" with GL-S20's IP address)
 
-(replace "**YOUR\_GL-S200\_IP\_ADDRESS**" with GL-S200's IP address)s
-:::
-
-Then click **Add Intergration** again, search for **Thread**, select it and click **FINISH**, enter **Thread** Intergrations, click **CONFIGURE** and make sure you have S200‘s Thread network under **Preferred network** line, and it contains an icon with **key+phone**. If not, do the following:
+Then click **Add Intergration** again, search for **Thread**, select it and click **FINISH**, enter **Thread** Intergrations, click **CONFIGURE** and make sure you have S20‘s Thread network under **Preferred network** line, and it contains an icon with **key+phone**. If not, do the following:
 
 Click **three dots** on the right to OpenThread Border Router, choose **Add to preferred network**.
 

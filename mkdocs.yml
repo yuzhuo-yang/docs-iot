@@ -89,6 +89,8 @@ nav:
       - User Manual: ble_proxy/gl-s10/user_manual.md
       - Firmware Compilation Guide: ble_proxy/gl-s10/firmware_compilation_guide.md
       - AWS Configuration Guide: ble_proxy/gl-s10/aws_configuration_guide.md
+      - Flash Guide: ble_proxy/gl-s10/flash_guide.md
+      - HA Integration Guide: ble_proxy/gl-s10/ha_integration_guide.md
   - Thread Board Router:
     - GL-S20:
       - General Product Introduction: thread_board_router/gl-s20/index.md
@@ -102,6 +104,10 @@ nav:
           - Overview: thread_board_router/gl-s20/user_manual/apis/index.md
           - Http RESTful API: thread_board_router/gl-s20/user_manual/apis/http_restful_api.md
           - BLE Network Configuration API: thread_board_router/gl-s20/user_manual/apis/ble_network_configuration_api.md
+        - Flash Guide: thread_board_router/gl-s20/user_manual/flash_guide.md
+        - Work with Home Assistant: thread_board_router/gl-s20/user_manual/work_with_home_assistant.md
+      - Secondary Development Guide:
+        - Firmware Compilation Guide: thread_board_router/gl-s20/user_manual/gl-s20-tbr_firmware_compilation_guide.md
     - GL-S200:
       - Overview: thread_board_router/gl-s200/index.md
       - Hardware: thread_board_router/gl-s200/hardware.md
@@ -112,6 +118,7 @@ nav:
       - Work with Home Assistant: thread_board_router/gl-s200/work_with_home_assistant.md
       - OTBR HTTP API: thread_board_router/gl-s200/otbr_http_api.md
       - OTBR MGMT UBUS API: thread_board_router/gl-s200/otbr_mgmt_ubus_api.md
+      - Bluetooth Development Guide: thread_board_router/gl-s200/ble_development_guide.md
   - IoT Dev Board:
     - Overview: iot_dev_board/index.md
     - Thread Development Board for GL-S20: iot_dev_board/using_tdb_on_gl-s20.md
